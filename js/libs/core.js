@@ -68,19 +68,19 @@ Fliplet.FormBuilder = (function() {
       // Define method to emit the new input value on change
       if (!component.methods.updateValue) {
         component.methods.updateValue = function() {
+          debugger
+          this.$emit('_input', this.name, this.inputValue);
           this.highlightError();
-          this.$emit('_input', this.name, this.value);
         }
       }
 
       // Define method to highlight Error on blur form field
       component.methods.highlightError = function () {
         var $vm = this;
-
-        if ($vm.$v && $vm.$v.value) {
+        if ($vm.$v && $vm.$v.inputValue) {
           $vm.$v.$touch();
 
-          if ($vm.$v.value.$error) {
+          if ($vm.$v.inputValue.$error) {
             $($vm.$el).addClass('has-error');
           } else {
             $($vm.$el).removeClass('has-error');
@@ -162,7 +162,7 @@ Fliplet.FormBuilder = (function() {
         if (this.name === '') {
           this.name = this.label;
         }
-        
+
         if (this._fieldNameError) {
           return;
         }
@@ -203,7 +203,7 @@ Fliplet.FormBuilder = (function() {
         type: Boolean,
         default: false
       };
-  
+
       component.props._showNameField = {
         type: Boolean,
         default: false
@@ -224,49 +224,49 @@ Fliplet.FormBuilder = (function() {
 
         return '';
       };
-  
+
       component.computed._fieldLabelError = function() {
         if (!this.label) {
           return 'Please provide a Field name & label';
         }
-    
+
         var existing = _.findIndex(this._fields, {
           name: this.name
         });
-    
+
         if (existing > -1 && existing !== this._idx) {
           return this.name + ' is taken. Please use another Field Name.';
         }
-    
+
         return '';
       };
-  
+
       component.methods._addCustomName = function() {
         this._showNameField = !this._showNameField;
         this.name = this.label;
         this.initTooltip();
       };
-  
+
       if (!component.methods.addCustomName) {
         component.methods.addCustomName = component.methods._addCustomName;
       }
-  
+
       component.methods._initTooltip = function() {
         var $vm = this;
-        
+
         $vm.$nextTick(function () {
           var tooltip = $vm.$refs.tooltip;
-  
+
           if (tooltip) {
             $(tooltip).tooltip();
           }
         });
       };
-  
+
       if (!component.methods.initTooltip) {
         component.methods.initTooltip = component.methods._initTooltip;
       }
-      
+
       component.methods._openFilePicker = function() {
         var $vm = this;
 

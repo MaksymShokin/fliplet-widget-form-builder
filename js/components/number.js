@@ -12,6 +12,14 @@ Fliplet.FormBuilder.field('number', {
     decimals: {
       type: Number,
       default: 0
+    },
+    inputValue: {
+      type: String
+    }
+  },
+  data: function () {
+    return {
+      updateDebounce: _.debounce(this.onInputHandler, 500)
     }
   },
   validations: function () {
@@ -19,7 +27,11 @@ Fliplet.FormBuilder.field('number', {
       value: {
         integer: window.validators.integer,
         maxLength: window.validators.maxLength(15)
-      }
+      },
+      inputValue: {
+        integer: window.validators.integer,
+        maxLength: window.validators.maxLength(15)
+      },
     };
 
     if (this.required) {
@@ -38,6 +50,10 @@ Fliplet.FormBuilder.field('number', {
     return rules;
   },
   methods: {
+    onInputHandler: function ($event) {
+      this.inputValue = $event.target.value;
+      this.updateValue();
+    },
     positiveValidator: function () {
       return window.validators.helpers.withParams(
         {

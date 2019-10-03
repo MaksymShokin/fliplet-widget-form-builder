@@ -7,5 +7,5 @@
   :id="name"
   :placeholder="placeholder"
 />
-<p class="text-danger" v-if="$v.value.url === false && $v.value.$ditry">The input is not a valid URL.</p>
+<p class="text-danger" v-if="$v.value.url === false && $v.value.$dirty">The input is not a valid URL.</p>
 <p class="text-danger" v-if="$v.value.required === false && $v.value.$dirty">Field is required.</p>
