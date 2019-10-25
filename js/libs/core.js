@@ -88,8 +88,11 @@ Fliplet.FormBuilder = (function() {
         }
       };
 
-      component.methods.saveProgress = function($event) {
-        this.$emit('_input', this.name, $event.target.value);
+      component.methods.onInput = function ($event) {
+        var $vm = this;
+        (_.debounce(function () {
+          $vm.$emit('_input', $vm.name, $event.target.value);
+        }, 200)());
       };
 
       // Define method to trigger the form reset from a children

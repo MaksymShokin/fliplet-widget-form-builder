@@ -7,7 +7,7 @@
     type="time"
     v-model.lazy="value"
     v-on:change="updateValue()"
-    v-on:input="saveProgress"
+    v-on:input="onInput($event)"
     :name="name"
     :id="name"
     :placeholder="placeholder"

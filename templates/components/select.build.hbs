@@ -5,7 +5,7 @@
           :id="name"
           v-model="value"
           v-on:change="updateValue()"
-          v-on:input="saveProgress">
+          v-on:input="onInput($event)">
     <option v-if="placeholder" value="">\{{ placeholder }}</option>
     <option v-for="option in options" :value="option.id || option.label" :disabled="option.disabled">
       \{{ option.label || option.id }}

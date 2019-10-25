@@ -8,7 +8,7 @@
             v-model="value"
             :value="option.id"
             v-on:change="updateValue()"
-            v-on:input="saveProgress"
+            v-on:input="onInput($event)"
     >
     <label class="rating-star" :for="name + '-' + index">
       <i class="fa fa-star-o"></i>
