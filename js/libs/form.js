@@ -214,8 +214,9 @@ Fliplet.Widget.instance('form-builder', function(data) {
 
         Fliplet.FormBuilder.emit('reset');
         this.$emit('reset');
-        
-        $vm.triggerBlurEventOnInputs();
+
+        $(this.$el).find('input').val('');
+        this.triggerBlurEventOnInputs();
       },
       onError: function (fieldName, error) {
         if (!error) {
