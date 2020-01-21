@@ -4,6 +4,10 @@ Fliplet.FormBuilder.field('email', {
   props: {
     placeholder: {
       type: String
+    },
+    toggleReadonly: {
+      type: Boolean,
+      default: true
     }
   },
   validations: function() {
@@ -17,5 +21,10 @@ Fliplet.FormBuilder.field('email', {
       rules.value.required = window.validators.required;
     }
     return rules;
+  },
+  methods: {
+    onFocus: function () {
+      this.toggleReadonly = false;
+    }
   }
 });

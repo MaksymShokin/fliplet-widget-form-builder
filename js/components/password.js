@@ -39,6 +39,10 @@ Fliplet.FormBuilder.field('password', {
     submitWhenFalsy: {
       type: Boolean,
       default: false
+    },
+    toggleReadonly: {
+      type: Boolean,
+      default: true
     }
   },
   validations: function () {
@@ -59,7 +63,7 @@ Fliplet.FormBuilder.field('password', {
   },
   computed: {
     fieldPlaceholder: function () {
-      return this.autogenerate ? 'A password will be automatically generated' : this.placeholder
+      return this.autogenerate ? 'A password will be automatically generated' : this.placeholder;
     }
   },
   mounted: function () {
@@ -82,6 +86,9 @@ Fliplet.FormBuilder.field('password', {
     updateConfirmation: function () {
       this.$v.valueConfirmation.$touch();
       this.highlightError();
+    },
+    onFocus: function () {
+      this.toggleReadonly = false;
     }
   }
 });

@@ -288,6 +288,10 @@ textarea.form-control {
   margin-bottom: 0;
 }
 
+.autocomplete-off {
+  background-color: #fff !important;
+}
+
 /* CHECKBOXES */
 
 .checkbox.checkbox-icon input[type="checkbox"] {

@@ -1,9 +1,11 @@
 <input
   type="text"
-  class="form-control"
+  class="form-control autocomplete-off"
   v-model.trim.lazy="value"
   v-on:blur="updateValue()"
   v-on:input="onInput($event)"
+  v-on:focus="onFocus()"
+  :readonly="toggleReadonly"
   :name="name"
   :id="name"
   :placeholder="placeholder"

@@ -198,6 +198,10 @@ nav>.btn {
   display: block;
 }
 
+.autocomplete-off {
+  background-color: #f8f6f7 !important;
+}
+
 /* END OF TEMPLATES GALLERY */
 
 .component {
