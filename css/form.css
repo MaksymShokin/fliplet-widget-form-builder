@@ -290,6 +290,11 @@ textarea.form-control {
 
 /* CHECKBOXES */
 
+.checkbox.checkbox-icon:focus-within {
+  border: 1px solid #337ab7;
+  border-radius: 3px;
+}
+
 .checkbox.checkbox-icon input[type="checkbox"] {
   z-index: -1;
   position: absolute;
@@ -365,6 +370,11 @@ html[dir="rtl"] .checkbox.checkbox-icon input[type="checkbox"] + label > span.ch
 
 
 /* RADIOS */
+
+.radio.radio-icon:focus-within {
+  border: 1px solid #337ab7;
+  border-radius: 3px;
+}
 
 .radio.radio-icon input[type="radio"] {
   z-index: -1;
@@ -515,6 +525,9 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
   pointer-events: none;
 }
 
+.select-proxy-display:focus-within {
+  border: 1px solid #337ab7;
+}
 
 /* FILE */
 
@@ -607,6 +620,10 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
   position: relative;
 }
 
+.fileUpload .btn.btn-primary:focus-within {
+  border: 1px solid #2e6da4;
+}
+
 .fileUpload .fa:not(.fa-file)  {
   display: block;
   position: absolute;
@@ -684,6 +701,11 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
   display: inline-block;
   text-align: left;
   direction: rtl;
+}
+
+[_type="flStarRating"] .inverse-direction:focus-within {
+  border: 1px solid #2e6da4;
+  border-radius: 5px;
 }
 
 [_type="flStarRating"] .rating-input {
