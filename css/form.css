@@ -181,6 +181,11 @@ form.placeholder button {
   outline: none;
 }
 
+button.btn.btn-primary.pull-right:focus,
+button.btn.btn-secondary.pull-right:focus {
+  color: #333;
+}
+
 @media (min-width:640px) {
   .btn-primary,
   .btn-secondary {
@@ -630,7 +635,7 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
 }
 
 .fileUpload .btn.btn-primary:focus-within {
-  outline: 1px solid #2e6da4;
+  color: #333
 }
 
 .fileUpload .fa:not(.fa-file)  {
