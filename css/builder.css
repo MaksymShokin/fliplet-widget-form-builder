@@ -557,6 +557,11 @@ nav>.btn {
   opacity: 0.4;
 }
 
+.radio.radio-icon:first-of-type,
+.checkbox.checkbox-icon:first-of-type {
+  margin-top: 0px;
+}
+
 .form-group .input-group {
   padding: 0;
   position: relative;

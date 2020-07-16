@@ -1,4 +1,4 @@
-<div class="fileUpload file-input">
+<div class="fileUpload file-input" :class="{ 'fileUpload-padding-top': value.length }">
   <div class="row">
     <div ref="canvasWrap" class="text-center" v-for="(file, index) in value">
       <div class="canvas-holder">
