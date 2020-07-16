@@ -294,6 +294,10 @@ textarea.form-control {
   outline: 1px solid #337ab7;
 }
 
+.checkbox.checkbox-icon:first-of-type {
+  margin-top: 0px;
+}
+
 .checkbox.checkbox-icon input[type="checkbox"] {
   z-index: -1;
   position: absolute;
@@ -372,6 +376,10 @@ html[dir="rtl"] .checkbox.checkbox-icon input[type="checkbox"] + label > span.ch
 
 .radio.radio-icon:focus-within {
   outline: 1px solid #337ab7;
+}
+  
+.radio.radio-icon:first-of-type {
+  margin-top: 0px;
 }
 
 .radio.radio-icon input[type="radio"] {
@@ -532,6 +540,9 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
 .fileUpload {
   position: relative;
   overflow: hidden;
+}
+
+.fileUpload-padding-top {
   padding-top: 10px;
 }
 
