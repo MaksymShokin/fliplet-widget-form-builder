@@ -8,7 +8,8 @@
         v-model="value"
         :value="option.id || option.label">
       <label v-on:click="clickHandler(option)">
-        <span class="check"><i class="fa fa-check"></i></span> \{{ option.label || option.id }}
+        <span class="check"><i class="fa fa-check"></i></span>
+        <span class="check-option">\{{ option.label || option.id }}</span>
       </label>
     </div>
   </template>

@@ -7,7 +7,7 @@ this["Fliplet"]["Widget"]["Templates"]["templates.components.buttons"] = Handleb
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.checkbox"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<template>\n  <template v-for=\"(option, index) in options\">\n    <div class=\"checkbox checkbox-icon\">\n      <input\n        type=\"checkbox\"\n        :id=\"name + '-' + index\"\n        :name=\"name\"\n        v-model=\"value\"\n        :value=\"option.id || option.label\">\n      <label v-on:click=\"clickHandler(option)\">\n        <span class=\"check\"><i class=\"fa fa-check\"></i></span> {{ option.label || option.id }}\n      </label>\n    </div>\n  </template>\n\n  <p class=\"text-danger\" v-if=\"$v.value.required === false && $v.value.$dirty\">Field is required.</p>\n</template>\n";
+    return "<template>\n  <template v-for=\"(option, index) in options\">\n    <div class=\"checkbox checkbox-icon\">\n      <input\n        type=\"checkbox\"\n        :id=\"name + '-' + index\"\n        :name=\"name\"\n        v-model=\"value\"\n        :value=\"option.id || option.label\">\n      <label v-on:click=\"clickHandler(option)\">\n        <span class=\"check\"><i class=\"fa fa-check\"></i></span>\n        <span class=\"check-option\">{{ option.label || option.id }}</span>\n      </label>\n    </div>\n  </template>\n\n  <p class=\"text-danger\" v-if=\"$v.value.required === false && $v.value.$dirty\">Field is required.</p>\n</template>\n";
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.date"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -55,7 +55,7 @@ this["Fliplet"]["Widget"]["Templates"]["templates.components.password"] = Handle
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.radio"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<template>\n  <template v-for=\"(option, index) in options\">\n    <div class=\"radio radio-icon\">\n      <input\n        type=\"radio\"\n        :id=\"name + '-' + index\"\n        :name=\"name\"\n        v-model=\"value\"\n        :value=\"option.id || option.label\">\n      <label v-on:click=\"clickHandler(option)\">\n        <span class=\"check\"><i class=\"fa fa-circle\"></i></span> {{ option.label || option.id }}\n      </label>\n    </div>\n  </template>\n  <p class=\"text-danger\" v-if=\"$v.value.required === false && $v.value.$dirty\">Field is required.</p>\n</template>\n";
+    return "<template>\n  <template v-for=\"(option, index) in options\">\n    <div class=\"radio radio-icon\">\n      <input\n        type=\"radio\"\n        :id=\"name + '-' + index\"\n        :name=\"name\"\n        v-model=\"value\"\n        :value=\"option.id || option.label\">\n      <label v-on:click=\"clickHandler(option)\">\n        <span class=\"check\"><i class=\"fa fa-circle\"></i></span>\n        <span class=\"check-option\">{{ option.label || option.id }}</span>\n      </label>\n    </div>\n  </template>\n  <p class=\"text-danger\" v-if=\"$v.value.required === false && $v.value.$dirty\">Field is required.</p>\n</template>\n";
 },"useData":true});
 
 this["Fliplet"]["Widget"]["Templates"]["templates.components.select"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
