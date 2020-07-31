@@ -133,6 +133,10 @@ Fliplet.FormBuilder.field('file', {
       }
 
       $vm.$emit('_input', $vm.name, $vm.value);
-    }
+    },
+    // triggerInput: function(event) {
+    //   event.preventDefault()
+    //   $(`#${this.name}`).trigger('click');
+    // }
   }
 });

@@ -258,6 +258,10 @@ Fliplet.FormBuilder.field('image', {
         addThumbnailToCanvas(image, index,
           $vm);
       });
+    },
+    triggerInput: function(event) {
+      event.preventDefault()
+      $(`#${this.name}`).trigger('click');
     }
   }
 });

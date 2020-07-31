@@ -181,11 +181,6 @@ form.placeholder button {
   outline: none;
 }
 
-button.btn.btn-primary.pull-right:focus,
-button.btn.btn-secondary.pull-right:focus {
-  color: #333;
-}
-
 @media (min-width:640px) {
   .btn-primary,
   .btn-secondary {
@@ -295,10 +290,6 @@ textarea.form-control {
 
 /* CHECKBOXES */
 
-.checkbox.checkbox-icon:focus-within {
-  outline: 1px solid #337ab7;
-}
-
 .checkbox.checkbox-icon:first-of-type {
   margin-top: 0px;
 }
@@ -378,10 +369,6 @@ html[dir="rtl"] .checkbox.checkbox-icon input[type="checkbox"] + label > span.ch
 
 
 /* RADIOS */
-
-.radio.radio-icon:focus-within {
-  outline: 1px solid #337ab7;
-}
   
 .radio.radio-icon:first-of-type {
   margin-top: 0px;
@@ -536,10 +523,6 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
   pointer-events: none;
 }
 
-.select-proxy-display:focus-within {
-  outline: 1px solid #337ab7;
-}
-
 /* FILE */
 
 .fileUpload {
@@ -634,10 +617,6 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
   position: relative;
 }
 
-.fileUpload .btn.btn-primary:focus-within {
-  color: #333
-}
-
 .fileUpload .fa:not(.fa-file)  {
   display: block;
   position: absolute;
@@ -715,10 +694,6 @@ html[dir="rtl"] .radio.radio-icon input[type="radio"] + label > span.check {
   display: inline-block;
   text-align: left;
   direction: rtl;
-}
-
-[_type="flStarRating"] .inverse-direction:focus-within {
-  outline: 1px solid #2e6da4;
 }
 
 [_type="flStarRating"] .rating-input {

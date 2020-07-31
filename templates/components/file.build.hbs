@@ -1,4 +1,4 @@
-<div class="fileUpload file-input" :class="{ 'fileUpload-padding-top': value.length }">
+<div class="fileUpload file-input focus-outline":class="{ 'fileUpload-padding-top': value.length }">
   <div class="row">
     <div ref="canvasWrap" class="text-center" v-for="(file, index) in value">
       <div class="canvas-holder">
@@ -12,6 +12,15 @@
   <label class="btn btn-primary">
     <i class="fa fa-plus" aria-hidden="true"></i>
     <span>Choose file</span>
-    <input type="file" ref="fileInput" :id="name" :name="name" :data-folder-id="mediaFolderId" class="input-file selectfile" :required="required" v-on:change="updateValue()" multiple>
+    <input 
+      type="file" 
+      ref="fileInput" 
+      :id="name" 
+      :name="name" 
+      :data-folder-id="mediaFolderId"
+      class="input-file selectfile" 
+      :required="required" 
+      @change="updateValue()" 
+      multiple>
   </label>
 </div>
