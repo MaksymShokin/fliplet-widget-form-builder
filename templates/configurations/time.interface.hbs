@@ -3,8 +3,43 @@
   <input class="form-control" type="text" v-model.trim="description" placeholder="Description text" />
 </div>
 <div class="form-group">
-  <label>Default value (current time when empty)</label>
-  <input class="form-control" type="time" v-model="value" placeholder="Default value" />
+  <div>
+    <label class="control-label">Default</label>
+  </div>
+  <div>
+    <div class="radio radio-icon">
+      <input type="radio" id="default" name="default" value='default' v-model="autoFill">
+      <label for="default">
+        <span class="check"><i class="fa fa-circle"></i></span>Autofill with current time if it's empty
+      </label>
+    </div>
+    <div class="radio radio-icon">
+      <input type="radio" id="always" name="always" value='always' v-model="autoFill">
+      <label for="always">
+        <span class="check"><i class="fa fa-circle"></i></span>Always autofill with current time
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div>
+    <label class="control-label">When appliyng the current time</label>
+  </div>
+  <div>
+    <div class="radio radio-icon">
+      <input type="radio" id="loaded" name="loaded" value='loaded' v-model="timeApply">
+      <label for="loaded">
+        <span class="check"><i class="fa fa-circle"></i></span>Use the time when form is loaded
+      </label>
+    </div>
+    <div class="radio radio-icon">
+      <input type="radio" id="submitted" name="submitted" value='submitted' v-model="timeApply">
+      <label for="submitted">
+        <span class="check"><i class="fa fa-circle"></i></span>Use the time when form is submitted
+      </label>
+    </div>
+  </div>
 </div>
 <div class="form-group">
   <label>Placeholder</label>

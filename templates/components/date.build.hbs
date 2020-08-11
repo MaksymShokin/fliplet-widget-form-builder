@@ -1,5 +1,11 @@
 <div v-if="description" class="help-block description">\{{ description }}</div>
-<div v-if="isWeb" class="input-group custom-date">
+
+<template v-if="autoFill === 'always' && dateApply === 'submitted' && empty">
+  Today
+</template>
+
+<template v-else>
+  <div v-if="isWeb" class="input-group custom-date">
   <div class="input-group-addon">
     <i class="fa fa-calendar"></i>
   </div>
@@ -30,4 +36,6 @@
     class="form-control"
   />
 </div>
+</template>  
+
 <p class="text-danger" v-if="$v.value.required === false && $v.value.$dirty">Field is required.</p>

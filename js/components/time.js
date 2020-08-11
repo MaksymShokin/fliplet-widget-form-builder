@@ -7,6 +7,18 @@ Fliplet.FormBuilder.field('time', {
     },
     description: {
       type: String
+    },
+    autoFill: {
+      type: String,
+      default: 'default'
+    },
+    timeApply: {
+      type: String,
+      default: 'loaded'
+    },
+    empty: {
+      type: Boolean,
+      default: true
     }
   },
   validations: function() {
@@ -42,7 +54,7 @@ Fliplet.FormBuilder.field('time', {
   },
   mounted: function() {
     var $vm = this;
-    if (!this.value) {
+    if (!this.value || this.autoFill === 'always') {
       var now = new Date();
       var hours = now.getHours();
       var minutes = now.getMinutes();
@@ -56,6 +68,7 @@ Fliplet.FormBuilder.field('time', {
       }
 
       this.updateValue(hours + ':' + minutes);
+      this.empty = false;
     }
     $vm.$v.$reset();
   }
