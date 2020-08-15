@@ -1,5 +1,5 @@
 <div v-if="description" class="help-block description">\{{ description }}</div>
-<template v-if="autoFill === 'always' && timeApply === 'submitted' && empty">
+<template v-if="autofill === 'always' && defaultSource === 'submission' && empty">
   Now
 </template>
 <template v-else>

@@ -10,13 +10,13 @@ Fliplet.FormBuilder.field('date', {
     description: {
       type: String
     },
-    autoFill: {
+    autofill: {
       type: String,
       default: 'default'
     },
-    dateApply: {
+    defaultSource: {
       type: String,
-      default: 'loaded'
+      default: 'load'
     },
     empty: {
       type: Boolean,
@@ -64,7 +64,7 @@ Fliplet.FormBuilder.field('date', {
       $el.datepicker('setDate', this.value || new Date());
     }
 
-    if (!this.value || this.autoFill === 'always') {
+    if (!this.value || this.autofill === 'always') {
       // HTML5 date field wants YYYY-MM-DD format
       $vm.updateValue(moment().format('YYYY-MM-DD'));
       this.empty = false;
